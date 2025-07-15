@@ -45,6 +45,14 @@ A simple, scalable, and modern URL shortener web application built with **React*
 
 ---
 
+## ⚠️ `node_modules` Not Included
+
+Due to maximum file upload size limitations on this platform, the `node_modules` folder was **not pushed** to this repository.
+
+To get everything working locally, you’ll need to install project dependencies using the steps below.
+
+---
+
 ## 📝 How to Use
 
 1. **Enter a long URL** into the input field.
@@ -60,7 +68,7 @@ A simple, scalable, and modern URL shortener web application built with **React*
    - cd frontend
 2. **Install Node dependencies**
    - npm install
-3.**Start Development Server**
+3. **Start Development Server**
   - npm run dev
 
 You need [Node.js](https://nodejs.org/) installed.
@@ -103,11 +111,5 @@ Visit `http://localhost:5173` (default for Vite) after running the dev server.
 
 
 
-## ⚠️ `node_modules` Not Included
 
-Due to maximum file upload size limitations on this platform, the `node_modules` folder was **not pushed** to this repository.
-
-To get everything working locally, you’ll need to install project dependencies using the steps below.
-
----
 
