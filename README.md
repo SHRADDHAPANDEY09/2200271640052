@@ -107,7 +107,6 @@ Visit `http://localhost:5173` (default for Vite) after running the dev server.
 
 ---
 
-## 🗂️ Example Component (`ShortenedUrl.js`)
 
 
 
