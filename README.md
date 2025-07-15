@@ -1,22 +1,107 @@
-# React + Vite
+# 🌐 React URL Shortener – Frontend
 
-This project provides a minimal setup for running **React** with **Vite**, including support for **Hot Module Replacement (HMR)** and customizable **ESLint rules**.
-
-Currently, two official React plugins for Vite are available:
-
-- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) — uses [Babel](https://babeljs.io/) for Fast Refresh
-- [`@vitejs/plugin-react-swc`](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) — uses [SWC](https://swc.rs/) for Fast Refresh
+A simple, scalable, and modern URL shortener web application built with **React**. This frontend communicates with a URL shortening API, providing users with an intuitive way to shorten and manage their links.
 
 ---
 
-## 💡 ESLint Configuration Tips
+## ✨ Features
 
-If you're building a production-level React application, consider expanding your ESLint configuration with **TypeScript** and type-aware linting rules.
-
-👉 Check out the [React + TypeScript template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts)  
-👉 Explore [`typescript-eslint`](https://typescript-eslint.io) for deeper static analysis
+- **Shorten any valid URL** with instant feedback
+- **Responsive input form** and clear UI
+- **Copy** shortened links to clipboard in one click
+- **URL history panel** – see previous shortened URLs (per session/localStorage)
+- **Error handling** for invalid URLs or API errors
 
 ---
+
+## 🚀 Tech Stack
+
+- **React** – frontend library
+- **CSS** / **Tailwind CSS** – styling
+- **Axios** or `fetch()` – for API integration
+- **Optional:** React Context or Redux for state, React Toastify for notifications
+
+---
+
+## 🖥️ Project Structure
+
+- src/
+- ├── components/
+- │ ├── Navbar.js
+- │ ├── Footer.js
+- │ ├── InputForm.js
+- │ ├── ShortenedUrl.js
+- │ └── UrlHistory.js
+- ├── utils/
+- │ └── api.js
+- ├── App.js
+- ├── App.css
+- └── main.jsx
+
+- **InputForm:** User input for URLs
+- **ShortenedUrl:** Displays the result + copy button
+- **UrlHistory:** Shows previous links this session
+- **Navbar/Footer:** Optional app layout additions
+
+---
+
+## 📝 How to Use
+
+1. **Enter a long URL** into the input field.
+2. Click **Shorten** to generate a short URL.
+3. **Copy** the result using the copy button.
+4. Find your previously generated links in the **history panel**.
+
+---
+
+## 📦 Setup & Run
+
+1. **Move into the project directory**
+   - cd frontend
+2. **Install Node dependencies**
+   - npm install
+3.**Start Development Server**
+  - npm run dev
+
+You need [Node.js](https://nodejs.org/) installed.
+
+
+Visit `http://localhost:5173` (default for Vite) after running the dev server.
+
+> **Note:** The `node_modules` folder is NOT included in this repository due to size limitations. Run `npm install` to restore all dependencies.
+
+---
+
+## 🔗 Example UI
+
+- Clean layout for mobile & desktop
+- Shorten field, result display, and URL history
+- Copy to clipboard functionality
+
+---
+
+## 🚦 API Integration
+
+- Calls a backend `/api/shorten` endpoint with your long URL
+- Expects JSON response with a `shortUrl` field
+- Handles errors and input validation gracefully
+
+---
+
+## 👨‍💻 Built With (examples)
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/) (or CRA)
+- [Tailwind CSS](https://tailwindcss.com/) / CSS Modules
+- [Axios](https://axios-http.com/) or `fetch`
+- [react-toastify](https://fkhadra.github.io/react-toastify/) (for nice notifications)
+- [nanoid](https://github.com/ai/nanoid) (if implementing your own backend)
+
+---
+
+## 🗂️ Example Component (`ShortenedUrl.js`)
+
+
 
 ## ⚠️ `node_modules` Not Included
 
@@ -26,30 +111,3 @@ To get everything working locally, you’ll need to install project dependencies
 
 ---
 
-## 🚀 Getting Started
-
-Clone this project, then set it up with the following commands:
-
-Navigate into the frontend directory
-cd frontend
-
-Install dependencies
-npm install
-
-Start the Vite development server
-npm run dev
-
-Once running, you'll be able to access the app at:
-
-http://localhost:5173
-
-_For other ports or options, see the Vite config in `vite.config.js`._
-
----
-
-## 📖 Learn More
-
-- [Vite Documentation](https://vitejs.dev)
-- [React Documentation](https://reactjs.org)
-- [ESLint](https://eslint.org/)
-- [Google Fonts](https://fonts.google.com/)
